@@ -1,5 +1,9 @@
 import customtkinter as ctk
 from cerebro.respuestas import responder
+import json 
+
+with open("datos/config.json", "r", encoding="utf-8") as archivo:
+    config = json.load(archivo)
 
 # Configuración de la apariencia
 ctk.set_appearance_mode("dark")
@@ -7,7 +11,7 @@ ctk.set_default_color_theme("blue")
 
 # Crear ventana
 ventana = ctk.CTk()
-ventana.title("Cyrus")
+ventana.title(config["nombre"])
 ventana.geometry("700x500")
 
 # Función para responder
@@ -19,14 +23,14 @@ def enviar_mensaje():
     chat.configure(state="normal")
     chat.insert("end", f"👤 Tú: {texto}\n")
     respuesta = responder(texto)
-    chat.insert("end", f"🤖 Cyrus: {respuesta}\n\n")
+    chat.insert("end", f"🤖 {config['nombre']}: {respuesta}\n\n")
     chat.configure(state="disabled")
     entrada.delete(0, "end")
     
 # Título
 titulo = ctk.CTkLabel(
     ventana,
-    text="🤖 CYRUS",
+    text=f"🤖 {config['nombre'].upper()}",
     font=("Arial", 30, "bold")
 )
 titulo.pack(pady=20)
@@ -34,7 +38,7 @@ titulo.pack(pady=20)
 # Mensaje
 mensaje = ctk.CTkLabel(
     ventana,
-    text="Bienvenido. Soy Cyrus, tu asistente personal.",
+    text=f"Bienvenido. Soy {config['nombre']}, tu asistente personal.",
     font=("Arial", 18)
 )
 mensaje.pack(pady=10)
@@ -48,7 +52,7 @@ chat = ctk.CTkTextbox(
 )
 chat.pack(pady=10)
 
-chat.insert("end", "🤖 Cyrus: Hola, soy Cyrus. ¿En qué puedo ayudarte?\n\n")
+chat.insert("end", f"🤖 {config['nombre']}: Hola, soy {config['nombre']}. ¿En qué puedo ayudarte?\n\n")
 chat.configure(state="disabled")
 
 # Respuesta de Cyrus

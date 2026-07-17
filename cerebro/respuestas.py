@@ -6,16 +6,17 @@ def responder(texto):
     gracias = ["gracias", "muchas gracias", "te agradezco"]
     despedidas = ["adios", "adiós", "hasta luego", "nos vemos", "chao"]
 
-    if texto in saludos:
-        return "Hola, Cristian. ¿Cómo puedo ayudarte?"
-
-    elif texto in preguntas:
-        return "Soy Cyrus, tu asistente personal."
-
-    elif texto in gracias:
-        return "¡De nada! 😊"
-
-    elif texto in despedidas:
-        return "Hasta luego. ¡Que tengas un excelente día!"
-
+    for saludo in saludos:
+        if saludo in texto:
+            return "Hola, Cristian. ¿Cómo puedo ayudarte?"
+    for pregunta in preguntas:
+        if pregunta in texto:
+            return "Soy Cyrus, tu asistente personal."
+    for palabra in gracias:
+        if palabra in texto:
+            return "¡De nada!"
+    for despedida in despedidas:
+        if despedida in texto:
+            return "Hasta luego. ¡Que tengas un excelente día!"
     return "Todavía estoy aprendiendo. Muy pronto sabré responder eso."
+        

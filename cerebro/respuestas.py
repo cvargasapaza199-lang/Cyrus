@@ -1,17 +1,21 @@
 def responder(texto):
-    texto = texto.strip().lower()
+    texto = texto.lower().strip()
 
-    if texto == "hola":
+    saludos = ["hola", "buenas", "buen día", "buenos días", "hey", "hi"]
+    preguntas = ["quien eres", "quién eres", "tu nombre"]
+    gracias = ["gracias", "muchas gracias", "te agradezco"]
+    despedidas = ["adios", "adiós", "hasta luego", "nos vemos", "chao"]
+
+    if texto in saludos:
         return "Hola, Cristian. ¿Cómo puedo ayudarte?"
 
-    elif texto == "quien eres" or texto == "¿quién eres?":
+    elif texto in preguntas:
         return "Soy Cyrus, tu asistente personal."
 
-    elif texto == "gracias":
+    elif texto in gracias:
         return "¡De nada! 😊"
 
-    elif texto == "adios":
-        return "Hasta luego. ¡Que tengas un buen día!"
+    elif texto in despedidas:
+        return "Hasta luego. ¡Que tengas un excelente día!"
 
-    else:
-        return "Todavía estoy aprendiendo."
+    return "Todavía estoy aprendiendo. Muy pronto sabré responder eso."

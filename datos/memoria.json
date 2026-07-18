@@ -33,6 +33,142 @@
         {
             "usuario": "Cyrus",
             "cyrus": "Tu color favorito es el azul."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "abrir calculadora"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Abriendo la calculadora..."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "abrir bloc de notas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Abriendo el Bloc de notas..."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "abrir explorador"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Abriendo el Explorador de archivos..."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "agregar tarea : estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea : Estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agrgar tarea : Estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea : Estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea: Estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 'estudiar python' agregada correctamente."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar tareas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📋 Tus tareas:\n1. estudiar python\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea: Terminar Sisfet"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 'terminar sisfet' agregada correctamente."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea: Estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 'estudiar python' agregada correctamente."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea: Terminar Sisfet"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 'terminar sisfet' agregada correctamente."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar tareas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📋 Tus tareas:\n1. ❌ estudiar python\n2. ❌ terminar sisfet\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "completar tarea 1"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 1 completada."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar tareas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📋 Tus tareas:\n1. ✅ estudiar python\n2. ❌ terminar sisfet\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "abrir calculadora"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Abriendo la calculadora..."
         }
     ]
 }

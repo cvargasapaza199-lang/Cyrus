@@ -38,6 +38,13 @@ titulo = ctk.CTkLabel(
     font=("Arial", 30, "bold")
 )
 titulo.pack(pady=20)
+estado = ctk.CTkLabel(
+    ventana,
+    text=f"{config['nombre']} v{config['version']} | Estado: En línea | Memoria: Activa",
+    font=("Arial", 12)
+)
+
+estado.pack(pady=5)
 
 # Mensaje
 mensaje = ctk.CTkLabel(

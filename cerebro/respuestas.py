@@ -1,7 +1,15 @@
 from memoria.memoria import guardar_dato, obtener_dato, guardar_historial
 from datetime import datetime
+from utilidades.comandos import ejecutar_comando
+from utilidades.tareas import agregar_tarea, listar_tareas, completar_tarea
+
+
 def responder(texto):
     texto = texto.lower().strip()
+    print (f"Texto recibido: {texto}")
+    comando = ejecutar_comando(texto)
+    if comando:
+        return comando
 
     # Saludos
     if "hola" in texto:
@@ -63,5 +71,33 @@ def responder(texto):
         fecha = datetime.now().strftime("%d/%m/%Y")
         return f"La fecha de hoy es {fecha}."
 
+    # Agregar tarea
+    elif texto.startswith("agregar tarea:"):
+        tarea = texto.replace("agregar tarea:", "").strip()
+        agregar_tarea(tarea)
+        return f"✅ Tarea '{tarea}' agregada correctamente."
+    
+    elif texto.startswith("completar tarea"):
+        try:
+            numero = int(texto.replace("completar tarea", "").strip())
+            if completar_tarea(numero):
+                return f"✅ Tarea {numero} completada."
+            else:
+                return "Ese número de tarea no existe."
+        except ValueError:
+            return "Debes escribir un número. Ejemplo: completar tarea 2"
+    
+    # Mostrar tareas
+    elif "mostrar tareas" in texto:
+        tareas = listar_tareas()
+        if not tareas:
+            return "No tienes tareas registradas."
+
+        respuesta = "📋 Tus tareas:\n"
+
+        for i, tarea in enumerate(tareas, start=1):
+            respuesta += f"{i}. {tarea}\n"
+
+        return respuesta
     else:
         return "Aún no sé responder eso, pero sigo aprendiendo."

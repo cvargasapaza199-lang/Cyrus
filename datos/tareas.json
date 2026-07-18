@@ -1,0 +1,10 @@
+[
+    {
+        "texto": "estudiar python",
+        "completada": true
+    },
+    {
+        "texto": "terminar sisfet",
+        "completada": false
+    }
+]

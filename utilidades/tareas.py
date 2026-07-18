@@ -39,4 +39,25 @@ def completar_tarea(numero):
         guardar_tareas(tareas)
         return True
     return False
+def eliminar_tarea(numero):
+    tareas = cargar_tareas()
 
+    if 1 <= numero <= len(tareas):
+        tarea = tareas.pop(numero - 1)
+        guardar_tareas(tareas)
+        return tarea["texto"]
+
+    return None
+def buscar_tareas(palabra):
+    tareas = cargar_tareas()
+    resultado = []
+
+    for i, tarea in enumerate(tareas, start=1):
+        if palabra.lower() in tarea["texto"].lower():
+            estado = "✅" if tarea["completada"] else "❌"
+            resultado.append(f"{i}. {estado} {tarea['texto']}")
+
+    return resultado
+def contar_tareas():
+    tareas = cargar_tareas()
+    return len(tareas)

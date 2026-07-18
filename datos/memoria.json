@@ -169,6 +169,94 @@
         {
             "usuario": "Cyrus",
             "cyrus": "Abriendo la calculadora..."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Mostrar tareas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📋 Tus tareas:\n1. ✅ estudiar python\n2. ❌ terminar sisfet\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Eliminar tarea 1"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "🗑️ Se eliminó la tarea: estudiar python"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Mostrar tareas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📋 Tus tareas:\n1. ❌ terminar sisfet\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agrgar tarea: Estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea. estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar tarea: estudiar python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 'estudiar python' agregada correctamente."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "agregar tarea: comprar pan"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "✅ Tarea 'comprar pan' agregada correctamente."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "buscar tarea python"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "🔎 Encontré estas tareas:\n\n2. ❌ estudiar python"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "buscar tarea comprar"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "🔎 Encontré estas tareas:\n\n3. ❌ comprar pan"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar tareas"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📋 Tus tareas:\n1. ❌ terminar sisfet\n2. ❌ estudiar python\n3. ❌ comprar pan\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "¿cuantas tareas tengo'"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Tienes 3 tareas registradas."
         }
     ]
 }

@@ -1,9 +1,7 @@
 from memoria.memoria import guardar_dato, obtener_dato, guardar_historial
 from datetime import datetime
 from utilidades.comandos import ejecutar_comando
-from utilidades.tareas import agregar_tarea, listar_tareas, completar_tarea
-
-
+from utilidades.tareas import (agregar_tarea, listar_tareas, completar_tarea, eliminar_tarea, buscar_tareas, contar_tareas)
 def responder(texto):
     texto = texto.lower().strip()
     print (f"Texto recibido: {texto}")
@@ -86,7 +84,42 @@ def responder(texto):
                 return "Ese número de tarea no existe."
         except ValueError:
             return "Debes escribir un número. Ejemplo: completar tarea 2"
-    
+    elif texto.startswith("eliminar tarea"):
+        try:
+            numero = int(texto.replace("eliminar tarea", "").strip())
+
+            tarea = eliminar_tarea(numero)
+
+            if tarea:
+                return f"🗑️ Se eliminó la tarea: {tarea}"
+
+            return "Ese número de tarea no existe."
+
+        except ValueError:
+            return "Debes escribir un número. Ejemplo: eliminar tarea 2"
+        
+    elif texto.startswith("buscar tarea"):
+        palabra = texto.replace("buscar tarea", "").strip()
+
+        resultado = buscar_tareas(palabra)
+
+        if resultado:
+            return "🔎 Encontré estas tareas:\n\n" + "\n".join(resultado)
+
+        return "No encontré ninguna tarea con ese nombre."
+
+    elif "cuantas tareas tengo" in texto or "cuántas tareas tengo" in texto:
+        cantidad = contar_tareas()
+        if cantidad == 0:
+            return "No tienes tareas registradas."
+
+        elif cantidad == 1:
+            return "Tienes 1 tarea registrada."
+
+        else:
+            return f"Tienes {cantidad} tareas registradas."
+
+
     # Mostrar tareas
     elif "mostrar tareas" in texto:
         tareas = listar_tareas()

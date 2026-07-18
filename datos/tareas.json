@@ -1,10 +1,14 @@
 [
     {
-        "texto": "estudiar python",
-        "completada": true
+        "texto": "terminar sisfet",
+        "completada": false
     },
     {
-        "texto": "terminar sisfet",
+        "texto": "estudiar python",
+        "completada": false
+    },
+    {
+        "texto": "comprar pan",
         "completada": false
     }
 ]

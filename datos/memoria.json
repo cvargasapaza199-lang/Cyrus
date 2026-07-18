@@ -1,4 +1,38 @@
 {
     "nombre": "cristian",
-    "color_favorito": "el azul"
+    "color_favorito": "el azul",
+    "historial": [
+        {
+            "usuario": "Tú",
+            "cyrus": "Hola"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Hola, Cristian. ¿Cómo puedo ayudarte?"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "que hora es"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "La hora actual es 10:10."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mi color favorito"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Aún no sé responder eso, pero sigo aprendiendo."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "cual es mi color favorito"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Tu color favorito es el azul."
+        }
+    ]
 }

@@ -1,6 +1,8 @@
 import customtkinter as ctk
 from cerebro.respuestas import responder
+from memoria.memoria import guardar_historial
 import json 
+from datetime import datetime
 
 with open("datos/config.json", "r", encoding="utf-8") as archivo:
     config = json.load(archivo)
@@ -16,17 +18,19 @@ ventana.geometry("700x500")
 
 # Función para responder
 def enviar_mensaje():
+    hora = datetime.now().strftime("%H:%M")
     texto = entrada.get().strip()
 
     if texto == "":
         return
     chat.configure(state="normal")
-    chat.insert("end", f"👤 Tú: {texto}\n")
+    chat.insert("end", f"{hora} 👤 Tú: {texto}\n")
     respuesta = responder(texto)
-    chat.insert("end", f"🤖 {config['nombre']}: {respuesta}\n\n")
+    guardar_historial("Tú", texto)
+    guardar_historial(config['nombre'], respuesta)
+    chat.insert("end", f"{hora} 🤖 {config['nombre']}: {respuesta}\n\n")
     chat.configure(state="disabled")
     entrada.delete(0, "end")
-    
 # Título
 titulo = ctk.CTkLabel(
     ventana,

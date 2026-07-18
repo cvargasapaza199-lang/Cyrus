@@ -257,6 +257,86 @@
         {
             "usuario": "Cyrus",
             "cyrus": "Tienes 3 tareas registradas."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "cual es mi nombre"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Tu nombre es cristian."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "cual es mi color favorito"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Tu color favorito es el azul."
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar evento: 20/07/2026Examen de algebra"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Evento agregado para el 20/07/2026examen: de algebra"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Agregar evento: 25/07/2026 Entrega del proyecto"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Evento agregado para el 25/07/2026: entrega del proyecto"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar eventos"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Tus eventos:\n\n1. 20/07/2026examen - de algebra\n2. 25/07/2026 - entrega del proyecto\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar eventos"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Tus eventos:\n\n1. 20/07/2026examen - de algebra\n2. 25/07/2026 - entrega del proyecto\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "agregar evento: 20/07/2026 examen de algebra"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Evento agregado para el 20/07/2026: examen de algebra"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "mostrar eventos"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Tus eventos:\n\n1. 20/07/2026examen - de algebra\n2. 25/07/2026 - entrega del proyecto\n3. 20/07/2026 - examen de algebra\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "eventos del 20/07/2026"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "📅 Eventos del 20/07/2026:\n\n1. examen de algebra\n"
+        },
+        {
+            "usuario": "Tú",
+            "cyrus": "Holaaa"
+        },
+        {
+            "usuario": "Cyrus",
+            "cyrus": "Hola, Cristian. ¿Cómo puedo ayudarte?"
         }
     ]
 }

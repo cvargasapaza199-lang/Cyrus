@@ -2,6 +2,7 @@ from memoria.memoria import guardar_dato, obtener_dato, guardar_historial
 from datetime import datetime
 from utilidades.comandos import ejecutar_comando
 from utilidades.tareas import (agregar_tarea, listar_tareas, completar_tarea, eliminar_tarea, buscar_tareas, contar_tareas)
+from utilidades.calendario import (agregar_evento, listar_eventos, buscar_eventos)
 def responder(texto):
     texto = texto.lower().strip()
     print (f"Texto recibido: {texto}")
@@ -119,7 +120,38 @@ def responder(texto):
         else:
             return f"Tienes {cantidad} tareas registradas."
 
+    elif texto.startswith("agregar " \
+    "evento:"):
+        datos = texto.replace("agregar evento:", "").strip()
+        try:
+            fecha, descripcion = datos.split(" ", 1)
+            agregar_evento(fecha, descripcion)
+            return f"📅 Evento agregado para el {fecha}: {descripcion}"
+        except ValueError:
+            return "Formato incorrecto. Ejemplo: Agregar evento: 20/07/2026 -"  " Examen de Álgebra"
+        
+    elif "mostrar eventos" in texto:
+        eventos = listar_eventos()
 
+        if not eventos:
+            return "No tienes eventos registrados."
+
+        respuesta = "📅 Tus eventos:\n\n"
+        for i, evento in enumerate(eventos, start=1):
+            respuesta += f"{i}. {evento['fecha']} - {evento['descripcion']}\n"
+        return respuesta
+    elif texto.startswith("eventos del"):
+        fecha = texto.replace("eventos del", "").strip()
+        eventos = buscar_eventos(fecha)
+
+        if not eventos:
+            return f"No hay eventos registrados para el {fecha}."
+
+        respuesta = f"📅 Eventos del {fecha}:\n\n"
+        for i, evento in enumerate(eventos, start=1):
+            respuesta += f"{i}. {evento['descripcion']}\n"
+        return respuesta
+    
     # Mostrar tareas
     elif "mostrar tareas" in texto:
         tareas = listar_tareas()
@@ -132,5 +164,4 @@ def responder(texto):
             respuesta += f"{i}. {tarea}\n"
 
         return respuesta
-    else:
-        return "Aún no sé responder eso, pero sigo aprendiendo."
+    
